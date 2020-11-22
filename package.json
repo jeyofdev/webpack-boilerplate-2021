@@ -1,0 +1,41 @@
+{
+  "name": "webpack-boilerplate-2021",
+  "version": "0.1.0",
+  "private": true,
+  "description": "my webpack configuration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeyofdev/webpack-boilerplate-2021.git"
+  },
+  "author": "jeyofdev <jgregoire.pro@gmail.com>",
+  "license": "ISC",
+  "keywords": [
+    "webpack",
+    "webpack 5"
+  ],
+  "bugs": {
+    "url": "https://github.com/jeyofdev/webpack-boilerplate-2021/issues"
+  },
+  "homepage": "https://github.com/jeyofdev/webpack-boilerplate-2021#readme",
+  "engines": {
+    "node": "12.x"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
