@@ -10,17 +10,17 @@ const plugins = {
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, './src/index.js'),
+    main: path.resolve(__dirname, '../src/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: '[name].js',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, '../src'),
         loader: 'babel-loader',
       },
       {
@@ -47,7 +47,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new plugins.HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.html'),
+      template: path.resolve(__dirname, '../src/index.html'),
       filename: 'index.html',
     }),
   ],
