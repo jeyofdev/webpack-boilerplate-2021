@@ -9,8 +9,6 @@ class User {
     this.firstname = firstname;
     this.lastname = lastname;
   }
-
-  hello = () => `Hello ${this.firstname} ${this.lastname}`;
 }
 
 const newUser = new User(data.firstname, data.lastname);
@@ -23,4 +21,3 @@ const newUser = new User(data.firstname, data.lastname);
 console.log(Hello('hello world'));
 console.log(HelloEN());
 console.log(HelloFR());
-console.log(newUser.hello());
