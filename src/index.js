@@ -1,11 +1,19 @@
+import Hello from './scripts/Hello';
+import { HelloEN, HelloFR } from './scripts/HelloWorld';
 import './styles/app.css';
-import user from './data/user.json';
+import data from './data/user.json';
 import logo from './images/wp-logo.png';
 
-console.log('hello world !!');
+class User {
+  constructor(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+  }
 
-const hello = 'hello people';
-console.log(hello);
+  hello = () => `Hello ${this.firstname} ${this.lastname}`;
+}
+
+const newUser = new User(data.firstname, data.lastname);
 
 const element = document.createElement('div');
 element.classList.add('hello');
@@ -16,4 +24,7 @@ const img = document.createElement('img');
 img.src = logo;
 document.body.append(img);
 
-console.log(`Hello ${user.firstname} ${user.lastname}`);
+console.log(Hello('hello world'));
+console.log(HelloEN());
+console.log(HelloFR());
+console.log(newUser.hello());
