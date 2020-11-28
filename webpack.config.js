@@ -1,4 +1,5 @@
 const path = require('path');
+const json = require('json');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -14,6 +15,29 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.json$/i,
+        type: 'json',
+        parser: {
+          parse: json.parse,
+        },
+      },
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
