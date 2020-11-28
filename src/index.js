@@ -1,6 +1,6 @@
 import Hello from './scripts/Hello';
 import { HelloEN, HelloFR } from './scripts/HelloWorld';
-import './styles/app.css';
+import './styles/app.scss';
 import data from './data/user.json';
 import logo from './images/wp-logo.png';
 
