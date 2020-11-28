@@ -1,23 +1,5 @@
-@font-face {
-  font-family: 'latoregular';
-  src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
-    url('../fonts/lato-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+// custom libraries
+@import 'lib/bootstrap/bootstrap';
 
-$color-primary: rgb(231, 232, 241);
-$font-primary: 'latoregular', sans-serif;
-
-body {
-  background: $color-primary;
-}
-
-.hello {
-  width: 300px;
-  height: 300px;
-  padding: 1rem;
-  font-family: $font-primary;
-  color: $color-primary;
-  background: url(../images/bg.png);
-}
+// app
+@import 'app/custom';

@@ -15,14 +15,10 @@ class User {
 
 const newUser = new User(data.firstname, data.lastname);
 
-const element = document.createElement('div');
-element.classList.add('hello');
-element.innerHTML = 'Hello world !!!';
-document.body.appendChild(element);
-
-const img = document.createElement('img');
-img.src = logo;
-document.body.append(img);
+// const element = document.createElement('div');
+// element.classList.add('hello');
+// element.innerHTML = 'Hello world !!!';
+// document.body.appendChild(element);
 
 console.log(Hello('hello world'));
 console.log(HelloEN());
