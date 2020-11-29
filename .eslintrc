@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "extends": ["plugin:prettier/recommended"],
+  "env": {
+    "node": true,
+    "es6": true,
+    "amd": true,
+    "browser": true,
+    "jquery": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "settings": {
+    "import/core-modules": [],
+    "import/ignore": ["node_modules", "\\.(scss|css|svg|json)$"]
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "globalReturn": true,
+      "impliedStrict": true,
+      "generators": false,
+      "objectLiteralDuplicateProperties": false,
+      "experimentalObjectRestSpread": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["import"],
+  "rules": {}
+}
