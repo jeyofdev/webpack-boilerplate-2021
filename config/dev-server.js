@@ -4,7 +4,6 @@ const webpack = require('webpack');
 
 const config = require('./webpack.dev.js');
 const options = {
-  contentBase: path.resolve(__dirname, './dist'),
   contentBase: './dist',
   open: true,
   hot: true,

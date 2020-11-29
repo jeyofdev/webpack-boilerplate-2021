@@ -6,8 +6,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const plugins = {
   CleanWebpackPlugin: require('clean-webpack-plugin'),
   HtmlWebpackPlugin: require('html-webpack-plugin'),
-  StylelintPlugin: require('stylelint-webpack-plugin'),
-  ESLintPlugin: require('eslint-webpack-plugin'),
 };
 
 module.exports = {
@@ -52,7 +50,5 @@ module.exports = {
       template: path.resolve(__dirname, '../src/index.html'),
       filename: 'index.html',
     }),
-    new plugins.StylelintPlugin(),
-    new plugins.ESLintPlugin(),
   ],
 };
