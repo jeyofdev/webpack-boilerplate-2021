@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const json = require('json');
+const svgToMiniDataURI = require('mini-svg-data-uri');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -44,10 +45,20 @@ module.exports = {
         },
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg)$/i,
+        test: /\.(woff(2)?|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'assets/fonts/[contenthash][ext][query]',
+        },
+      },
+      {
+        test: /\.svg/,
+        type: 'asset/inline',
+        generator: {
+          dataUrl: (content) => {
+            content = content.toString();
+            return svgToMiniDataURI(content);
+          },
         },
       },
       {
