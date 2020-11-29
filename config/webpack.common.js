@@ -14,7 +14,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: '[name].js',
+    filename: 'assets/js/[name].js',
   },
   module: {
     rules: [
@@ -25,15 +25,29 @@ module.exports = {
       },
       {
         test: /\.(s)?css$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { sourceMap: true, importLoaders: 1 },
+          },
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
+        ],
       },
       {
         test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/img/[contenthash][ext][query]',
+        },
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[contenthash][ext][query]',
+        },
       },
       {
         test: /\.json$/i,
