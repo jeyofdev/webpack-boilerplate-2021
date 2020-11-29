@@ -21,3 +21,5 @@ const newUser = new User(data.firstname, data.lastname);
 console.log(Hello('hello world'));
 console.log(HelloEN());
 console.log(HelloFR());
+
+$('p').css('color', '#64829c');

@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const json = require('json');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -59,10 +60,32 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+    }),
     new CleanWebpackPlugin(),
     new plugins.HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/index.html'),
       filename: 'index.html',
     }),
   ],
+  optimization: {
+    moduleIds: 'deterministic',
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
 };
