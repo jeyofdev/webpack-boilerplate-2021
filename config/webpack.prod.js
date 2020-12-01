@@ -5,6 +5,7 @@ const common = require('./webpack.common.js');
 const plugins = {
   WebpackAssetsManifest: require('webpack-assets-manifest'),
   MiniCssExtractPlugin: require('mini-css-extract-plugin'),
+  ImageMinimizerPlugin: require('image-minimizer-webpack-plugin'),
 };
 
 module.exports = merge(common, {
@@ -41,6 +42,25 @@ module.exports = merge(common, {
       space: 2,
       writeToDisk: false,
       replacer: require('./util/assetManifestsFormatter'),
+    }),
+    new plugins.ImageMinimizerPlugin({
+      minimizerOptions: {
+        plugins: [
+          ['gifsicle', { interlaced: true }],
+          ['jpegtran', { progressive: true }],
+          ['optipng', { optimizationLevel: 5 }],
+          [
+            'svgo',
+            {
+              plugins: [
+                {
+                  removeViewBox: false,
+                },
+              ],
+            },
+          ],
+        ],
+      },
     }),
     new plugins.MiniCssExtractPlugin({
       filename: 'assets/styles/[name].[contenthash].css',

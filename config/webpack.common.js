@@ -17,6 +17,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'assets/js/[name].js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -68,6 +69,7 @@ module.exports = {
           parse: json.parse,
         },
       },
+      { test: /\.html$/, loader: 'html-loader' },
     ],
   },
   plugins: [
