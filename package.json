@@ -70,7 +70,9 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
     "stylelint-webpack-plugin": "^2.1.1",
     "webpack": "^5.8.0",
     "webpack-assets-manifest": "^3.1.1",
@@ -81,6 +83,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "bootstrap": "^4.5.3",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "slick-carousel": "^1.8.1"
   }
 }

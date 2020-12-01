@@ -1,5 +1,6 @@
 import Hello from './modules/Hello';
 import { HelloEN, HelloFR } from './modules/HelloWorld';
+import 'slick-carousel';
 import '../styles/app.scss';
 import data from '../data/user.json';
 import iconSvg from '../images/icon.svg';
@@ -25,3 +26,4 @@ console.log(HelloEN());
 console.log(HelloFR());
 
 $('p').css('color', '#64829c');
+$('.slick-slider').slick();

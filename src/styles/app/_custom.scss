@@ -36,3 +36,14 @@ p {
   color: $color-primary;
   background: url(../images/bg.png);
 }
+
+.slick-slider {
+  width: 250px;
+  margin: 20px auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.slick-slider .fab {
+  font-size: 5rem;
+}
