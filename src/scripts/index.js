@@ -1,8 +1,9 @@
-import Hello from './scripts/Hello';
-import { HelloEN, HelloFR } from './scripts/HelloWorld';
-import './styles/app.scss';
-import data from './data/user.json';
-import iconSvg from './images/icon.svg';
+import Hello from './modules/Hello';
+import { HelloEN, HelloFR } from './modules/HelloWorld';
+import 'slick-carousel';
+import '../styles/app.scss';
+import data from '../data/user.json';
+import iconSvg from '../images/icon.svg';
 
 class User {
   constructor(firstname, lastname) {
@@ -12,11 +13,6 @@ class User {
 }
 
 const newUser = new User(data.firstname, data.lastname);
-
-// const element = document.createElement('div');
-// element.classList.add('hello');
-// element.innerHTML = 'Hello world !!!';
-// document.body.appendChild(element);
 
 const logo = document.createElement('img');
 logo.classList.add('logo');
@@ -30,3 +26,4 @@ console.log(HelloEN());
 console.log(HelloFR());
 
 $('p').css('color', '#64829c');
+$('.slick-slider').slick();

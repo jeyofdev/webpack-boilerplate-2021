@@ -1,6 +1,6 @@
 {
   "name": "webpack-boilerplate-2021",
-  "version": "0.1.0",
+  "version": "1.0",
   "private": true,
   "description": "my webpack configuration",
   "main": "index.js",
@@ -52,7 +52,13 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-webpack-plugin": "^2.4.0",
+    "html-loader": "^1.3.2",
     "html-webpack-plugin": "^4.5.0",
+    "image-minimizer-webpack-plugin": "^1.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^8.0.0",
     "json": "^10.0.0",
     "mini-css-extract-plugin": "^1.3.1",
     "mini-svg-data-uri": "^1.2.3",
@@ -64,7 +70,9 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
     "stylelint-webpack-plugin": "^2.1.1",
     "webpack": "^5.8.0",
     "webpack-assets-manifest": "^3.1.1",
@@ -75,6 +83,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "bootstrap": "^4.5.3",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "slick-carousel": "^1.8.1"
   }
 }

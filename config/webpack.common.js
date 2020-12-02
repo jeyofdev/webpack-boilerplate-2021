@@ -12,11 +12,12 @@ const plugins = {
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, '../src/index.js'),
+    main: path.resolve(__dirname, '../src/scripts/index.js'),
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'assets/js/[name].js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -68,6 +69,7 @@ module.exports = {
           parse: json.parse,
         },
       },
+      { test: /\.html$/, loader: 'html-loader' },
     ],
   },
   plugins: [
