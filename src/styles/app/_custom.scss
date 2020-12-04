@@ -18,32 +18,3 @@ p {
   font-family: 'latoregular', sans-serif;
   color: $color-dark;
 }
-
-.btn-group-lg > .btn,
-.btn-lg {
-  transform: translateX(10px);
-}
-
-.jumbotron {
-  background: url(../images/bg.png);
-}
-
-.hello {
-  width: 300px;
-  height: 300px;
-  padding: 1rem;
-  font-family: $font-primary;
-  color: $color-primary;
-  background: url(../images/bg.png);
-}
-
-.slick-slider {
-  width: 250px;
-  margin: 20px auto;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.slick-slider .fab {
-  font-size: 5rem;
-}

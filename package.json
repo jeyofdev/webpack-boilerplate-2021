@@ -83,7 +83,7 @@
     "webpack-merge": "^5.4.0"
   },
   "dependencies": {
-    
+    "jquery": "^3.5.1"
   },
   "husky": {
     "hooks": {
