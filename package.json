@@ -83,10 +83,7 @@
     "webpack-merge": "^5.4.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "bootstrap": "^4.5.3",
-    "jquery": "^3.5.1",
-    "slick-carousel": "^1.8.1"
+    "jquery": "^3.5.1"
   },
   "husky": {
     "hooks": {
