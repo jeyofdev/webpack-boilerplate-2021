@@ -1,1 +1,49 @@
-// custom
+$color-primary: rgb(220, 227, 240);
+$color-dark: rgb(22, 23, 24);
+$font-primary: 'latoregular', sans-serif;
+
+@font-face {
+  font-family: 'latoregular';
+  src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+    url('../fonts/lato-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: $color-primary;
+}
+
+p {
+  font-family: 'latoregular', sans-serif;
+  color: $color-dark;
+}
+
+.btn-group-lg > .btn,
+.btn-lg {
+  transform: translateX(10px);
+}
+
+.jumbotron {
+  background: url(../images/bg.png);
+}
+
+.hello {
+  width: 300px;
+  height: 300px;
+  padding: 1rem;
+  font-family: $font-primary;
+  color: $color-primary;
+  background: url(../images/bg.png);
+}
+
+.slick-slider {
+  width: 250px;
+  margin: 20px auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.slick-slider .fab {
+  font-size: 5rem;
+}
