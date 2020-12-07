@@ -14,7 +14,7 @@ module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'assets/js/[name].[contenthash].js',
-    publicPath: '/dist/',
+    publicPath: './',
     chunkFilename: '[id].[chunkhash].js',
   },
   module: {
@@ -63,7 +63,7 @@ module.exports = merge(common, {
       },
     }),
     new plugins.MiniCssExtractPlugin({
-      filename: 'assets/styles/[name].[contenthash].css',
+      filename: '[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css',
     }),
   ],
